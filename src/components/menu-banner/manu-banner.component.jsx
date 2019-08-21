@@ -10,7 +10,7 @@ const MenuBanner = ({ title, imageUrl, size }) => (
       }}
     />
     <div className="menu-banner__content">
-      <div className="menu-banner__title">{ title.toUpperCase() }</div>
+      <div className="menu-banner__title">{title.toUpperCase()}</div>
       <div className="menu-banner__subtitle">shop now</div>
     </div>
   </div>
