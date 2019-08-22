@@ -3,8 +3,8 @@ import './directory.styles.scss';
 import MenuBanner from '../menu-banner/manu-banner.component';
 
 class Directory extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       sections: [
@@ -47,17 +47,10 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='directory-menu'>
-        {
-          this.state.sections.map(({ id, title, imageUrl, size }) => (
-              <MenuBanner
-                key={id}
-                title={title}
-                size={size}
-                imageUrl={imageUrl}
-              />
-            )
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+            <MenuBanner key={id} {...otherSectionProps} />
           )
-        }
+        )}
       </div>
     );
   }

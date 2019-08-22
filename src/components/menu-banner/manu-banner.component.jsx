@@ -1,8 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import './menu-banner.styles.scss';
 
-const MenuBanner = ({ title, imageUrl, size }) => (
-  <div className={`${size ? size : ''} menu-banner`}>
+const MenuBanner = ({ title, imageUrl, size, history, linkUrl, match }) => (
+  <div className={`${size ? size : ''} menu-banner`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div
       className="menu-banner__background"
       style={{
@@ -16,4 +18,4 @@ const MenuBanner = ({ title, imageUrl, size }) => (
   </div>
 );
 
-export default MenuBanner;
+export default withRouter(MenuBanner);
