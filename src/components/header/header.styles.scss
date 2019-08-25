@@ -1,0 +1,43 @@
+@import '../../assets/variables';
+
+.header {
+  padding: .5rem 0;
+  border-bottom: 1px solid $gray-1;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    margin: 0;
+    list-style: none;
+  }
+  &__item {
+    margin-left: 1.5rem;
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    transition: color .1s ease-in-out;
+    &:hover {
+      color: lighten($black, 70%);
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 46px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+  &__image {
+    width: 100%;
+    max-height: 100%;
+  }
+}

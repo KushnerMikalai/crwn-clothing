@@ -1,0 +1,11 @@
+.collection-preview {
+  margin-bottom: 1rem;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__content-item {
+    width: 25%;
+  }
+}
