@@ -17,6 +17,10 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   min-width: 280px;
   width: 85.71429vw;
@@ -35,4 +39,11 @@ body {
 .col {
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.app {
+  min-height: 100vh;
+  background-image: url('./assets/images/dots-bg.png');
+  background-size: 20px 20px;
+  background-color: #fff;
 }
