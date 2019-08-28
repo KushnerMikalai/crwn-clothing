@@ -21,6 +21,14 @@ a {
   text-decoration: none;
 }
 
+.clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
 .container {
   min-width: 280px;
   width: 85.71429vw;
@@ -32,6 +40,8 @@ a {
 }
 
 .row {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: -8px;
   margin-right: -8px;
 }

@@ -8,7 +8,7 @@
   position: sticky;
   z-index: 4;
   padding: .4rem 0;
-  //border-bottom: 1px solid $gray-1;
+  //border-bottom: 1px solid $gray_1;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
   pointer-events: auto;
@@ -59,8 +59,8 @@
   }
   &__text {
     display: inline-block;
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 1.4rem;
     color: $black;
     text-shadow: 0 0 1px $black;
     text-transform: uppercase;

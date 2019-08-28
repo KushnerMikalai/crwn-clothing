@@ -24,6 +24,9 @@ const Header = () => {
               <li className={'nav__item'}>
                 <Link className={'nav__link'} to='/shop'>Shop</Link>
               </li>
+              <li className={'nav__item'}>
+                <Link className={'nav__link'} to='/signin'>Sign In</Link>
+              </li>
             </ul>
           </nav>
 

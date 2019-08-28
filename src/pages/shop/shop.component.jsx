@@ -21,7 +21,7 @@ class ShopPage extends React.Component {
       <div className='shop-page'>
         <div className="container">
           <Title title={'Shop Page'} />
-          <div className="shop-page__row">
+          <div className="shop-page__row clearfix">
             {
               collections.map(({ id, ...otherCollectionProps }) => (
                 <CollectionPreview key={id} {...otherCollectionProps}/>
