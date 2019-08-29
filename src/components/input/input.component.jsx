@@ -7,7 +7,7 @@ class Input extends React.Component {
     super(props);
 
     this.input = React.createRef();
-    this.handleClickPlaceholder = this.handleClickPlaceholder.bind(this);
+    this.handleClickLabel = this.handleClickLabel.bind(this);
 
     this.state = {
       value: '',
@@ -30,30 +30,30 @@ class Input extends React.Component {
     }
   };
 
-  handleClickPlaceholder() {
+  handleClickLabel() {
     this.input.current.focus();
   }
 
-  onFieldChange = event => {
-    this.props.onChange(event);
-  };
-
   render() {
     const { focused, hasValue } = this.state;
-    const { placeholder, name, type, textValue, className, button } = this.props;
+    const { handleChange, label, ...otherProps } = this.props;
     return (
-      <div className={`input${focused ? ' focused' : ''}${hasValue ? ' hasValue' : ''}${button ? ' input--button' : ''}`}>
+      <div className={`input${focused ? ' focused' : ''}${hasValue ? ' shrink' : ''}`}>
         <input
           ref={this.input}
           onBlur={this.handleBlur}
           onFocus={this.handleFocus}
-          onChange={this.onFieldChange}
+          onChange={handleChange}
           className={'input__el'}
-          name={name}
-          type={type}
-          value={textValue || ''}
+          {...otherProps}
         />
-        {placeholder ? <div onClick={this.handleClickPlaceholder} className="input__placeholder">{placeholder}</div> : ''}
+        {
+          label ?
+            (<div onClick={this.handleClickLabel} className="input__label">
+              {label}
+            </div>)
+            : null
+        }
       </div>
     )
   }

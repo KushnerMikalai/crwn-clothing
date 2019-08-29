@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import "../../assets/variables";
 
 .input {
   position: relative;
@@ -14,26 +14,7 @@
     border-radius: 2px;
     z-index: 1;
     background-color: $white;
-    content: '';
-  }
-  &--button {
-    border: 1px solid $blue_1;
-    &::after {
-      content: none;
-    }
-  }
-  &--button & {
-    &__el {
-      cursor: pointer;
-      color: $white;
-      background-color: $blue_1;
-      &:hover {
-        background-color: lighten($blue_1, 10%);
-      }
-      &:active {
-        background-color: darken($blue_1, 10%);
-      }
-    }
+    content: "";
   }
   &.focused {
     border: 1px solid $blue_1;
@@ -41,18 +22,18 @@
       border: 1px solid $blue_1;
     }
   }
-  &.hasValue & {
-    &__placeholder {
-      transform: translateY(-50%) scale(.7);
-      left: -.7rem;
+  &.shrink & {
+    &__label {
+      transform: translateY(-50%) scale(0.8);
+      left: -0.4rem;
       top: -1%;
     }
   }
   &.focused & {
-    &__placeholder {
+    &__label {
       color: $blue_1;
-      transform: translateY(-50%) scale(.7);
-      left: -.7rem;
+      transform: translateY(-50%) scale(0.8);
+      left: -0.4rem;
       top: -1%;
     }
   }
@@ -66,19 +47,19 @@
     z-index: 2;
     border: none;
     background-color: transparent;
-    transition: background-color .1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
     &:focus {
       outline: none;
     }
   }
-  &__placeholder {
+  &__label {
     position: absolute;
     transform: translateY(-50%);
-    left: .6rem;
-    padding: 0 .5rem;
+    left: 0.6rem;
+    padding: 0 0.5rem;
     top: 50%;
     background-color: $white;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     color: $gray_2;
     z-index: 3;
   }

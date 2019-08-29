@@ -1,0 +1,25 @@
+@import "../../assets/variables";
+
+.custom-button {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: $white;
+  background-color: $blue_1;
+  border: 1px solid $blue_1;
+  border-radius: 3px;
+  &:hover {
+    background-color: lighten($blue_1, 10%);
+    border: 1px solid lighten($blue_1, 10%);
+  }
+  &:active {
+    background-color: darken($blue_1, 10%);
+    border: 1px solid darken($blue_1, 10%);
+  }
+  &:focus {
+    outline: dashed;
+  }
+}
